@@ -1,0 +1,7 @@
+body {
+    font-family: sans-serif;
+    background: url("../static/images/note.jpg") no-repeat;
+}
+.container {
+    margin: 100px 0 0 100px;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Notes</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Your Notes</h1>
+            {% if notes %}
+                <ul>
+                    {% for e in notes %}
+                        <li>{{e}}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+
+            <form action="{{ url_for('index') }}" method="post">
+                <input type="text" name="note" placeholder="Enter note">
+                <input type="submit" value="Add">
+            </form>
+        </div>
+
+    </body>
+</html>
