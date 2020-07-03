@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Guess</title>
+    </head>
+    <style media="screen">
+        body {
+            text-align: center;
+        }
+    </style>
+    <body>
+        <h1>Guess My Number</h1>
+        {% if content|length > 0 %}
+            <ul>
+                {% for e in content %}
+                    <li>{{ e }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <form action="{{ url_for('index') }}" method="post">
+            <input type="text" name="number">
+            <button type="submit">Guess</button>
+        </form>
+    </body>
+</html>
