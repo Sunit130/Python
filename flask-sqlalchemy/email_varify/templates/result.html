@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='utf-8'>
+        <title>Title</title>
+        <meta name='description' content='Description'>
+         <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+    </head>
+    <body>
+        <div id="wrapper">
+            <h1>Submitted Info</h1>
+            Name: {{name}}<br>
+            Dojo Location: {{location}}<br>
+            Favorite Language: {{language}}<br>
+            Comment: {{comment}}<br>
+            <a href='/'>Return to form</a>
+        </div>
+    </body>
+</html>
