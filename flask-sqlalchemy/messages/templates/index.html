@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Messages</title>
+    </head>
+    <body>
+        <form action="{{ url_for('add' )}}" method="post">
+            <input type="text" name="message">
+            <input type="submit" value="Send">
+        </form>
+        <table>
+            {% for e in messages %}
+                <tr>
+                    <td>{{ e.username }}</td>
+                    <td>{{ e.message }}</td>
+                    <td>{{ e.date}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
